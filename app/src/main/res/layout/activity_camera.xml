@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <com.camerakit.CameraKitView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="64dp"
+        android:visibility="visible"
+        app:camera_facing="back"
+        app:camera_flash="auto"
+        app:camera_focus="continuous"
+        app:camera_permissions="camera" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/photoButton"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/group"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cb_pressedRingWidth="8dip"/>
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/gallery"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/group_4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/changeCamera"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/group_3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/flash"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/shape"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/flash_on"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/flash_on"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/close"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:src="@drawable/ic_close_black_24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:id="@+id/usarFotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#42bcaa"
+        android:text="USAR FOTOS"
+        android:layout_marginBottom="43dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/countPhoto"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circle_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="60dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/myImageViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_alignLeft="@+id/countPhoto"
+        android:layout_alignTop="@+id/countPhoto"
+        android:layout_alignRight="@+id/countPhoto"
+        android:layout_alignBottom="@+id/countPhoto"
+        android:gravity="center"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
